@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Produits index{% endblock %}
+
+{% block body %}
+
+
+    {% include 'partials/header.html.twig' %}
+    {% include 'partials/produits.html.twig' %}
+    <a href="{{ path('produits_PTO') }}">
+        <div class="container type-voyage">
+            <h2 class="h2">
+
+                <i class="fas fa-undo-alt"></i> toutes les prestations
+
+            </h2>
+        </div>
+    </a>
+    {% include 'partials/footer.html.twig' %}
+
+
+{% endblock %}

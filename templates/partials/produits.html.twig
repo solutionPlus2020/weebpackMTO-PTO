@@ -1,0 +1,118 @@
+
+    <!-- section main -->
+    <section id="main" role="main" class="mx-auto">
+        {%  if  sejours %}
+        <div class="container  " id="incontournables">
+            <h2 class="h2">
+                <svg class="svg-inline--fa fa-grip-lines fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="grip-lines" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                    <path fill="currentColor" d="M496 288H16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h480c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zm0-128H16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h480c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16z"></path></svg>
+                <!-- <i class="fas fa-grip-lines"></i> --> Nos Séjours
+                <svg class="svg-inline--fa fa-grip-lines fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="grip-lines" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M496 288H16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h480c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zm0-128H16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h480c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16z"></path></svg><!-- <i class="fas fa-grip-lines"></i> -->
+            </h2>
+            <div class="row justify-content-center">
+
+                {% for sejour in sejours %}
+                    <div class="col-md-3 col-sm-6 item-thematique">
+
+                        <img  src="{{ asset('build/'~ sejour.img) }}"
+                             alt=" &amp; IGUAZU - CIRCUIT 12 JOURS &amp; 9 NUITS  - ARGENTINE"
+                             style="height:270px;object-fit: cover;">
+                        <!--span style="position:absolute; top:0px; left:15px; padding:8px; background:#ff4655; color:white;font-size:24px;">-%</span-->
+                        <div class="thematique-content text-center">
+                            <h3 class="pb-0" style="font-size: 0.9rem;text-transform: none">{{ sejour.title }} </h3> <h6 > {{ sejour.typePrestation}} - {{ sejour.pays}}</h6>
+                            <span></span><span class="from"></span><span class="price"></span>
+                            <span class="ttc"></span><a href="{{ path('produits_show', {'id': sejour.id}) }}" class="btn btn-primary center">Voir l'offre</a></div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+{% endif %}
+        {%  if  circuits %}
+        <div class="container type-voyage">
+            <h2 class="h2">
+                <svg class="svg-inline--fa fa-grip-lines fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="grip-lines" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                    <path fill="currentColor" d="M496 288H16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h480c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zm0-128H16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h480c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16z"></path></svg>
+                <!-- <i class="fas fa-grip-lines"></i> --> Nos Circuits <svg class="svg-inline--fa fa-grip-lines fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="grip-lines" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M496 288H16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h480c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zm0-128H16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h480c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16z"></path></svg><!-- <i class="fas fa-grip-lines"></i> --></h2>
+            <div class="row justify-content-center">
+                <!-- loop through thematiques -->
+                {% for circuit in circuits %}
+                    <article class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb30">
+                        <figure class="card"><img src="{{ asset('build/'~circuit.img) }}"  class="card-image" alt="{{ circuit.title }}" style="object-fit: cover">
+                            <div class="card-seo">
+                                <div class="content">
+                                    <h4 class="seo-title">{{ circuit.title }}</h4> <h5 class="seo-title">{{ circuit.typePrestation}} - {{ circuit.pays}} </h5>
+                                    <div class="seo-content">
+                                        <p>Texte pour ....</p>
+                                    </div>
+                                </div>
+                                <div class="seo-overlay"></div>
+                            </div>
+                            <figcaption class="card-details" style="text-align: center">
+                                <div class="card-details-content">
+                                    <span class="card-details-title md-title">{{  circuit.title }}  {{ circuit.pays}} </span>
+                                    <div class="card-prices">
+                                        <span class="start-from"></span>
+                                        <span class="current-price"></span>
+                                        <a href="{{ path('produits_show', {'id':  circuit.id}) }}" class="btn btn-primary" style="margin-right: auto;margin-left: auto" role="button">
+                                            </a>
+                                         <a href="{{ path('produits_show', {'id':  circuit.id}) }}" class="btn btn-primary" style="margin-right: auto;margin-left: auto" role="button">
+                                        Voir l'offre</a>
+                                    </div>
+
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </article>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+        {%  if  weekends %}
+        <div class="container type-voyage">
+            <h2 class="h2">
+                <svg class="svg-inline--fa fa-grip-lines fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="grip-lines" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M496 288H16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h480c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zm0-128H16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h480c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16z"></path></svg>
+                <!-- <i class="fas fa-grip-lines"></i> --> Nos Week-End <svg class="svg-inline--fa fa-grip-lines fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="grip-lines" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M496 288H16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h480c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zm0-128H16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h480c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16z"></path></svg><!-- <i class="fas fa-grip-lines"></i> --></h2>
+            <div class="row justify-content-center">
+                <!-- loop through thematiques -->
+                {% for weekend in weekends %}
+                    <article class="col-lg-5 col-md-5 col-sm-6 col-xs-12 mb30">
+
+                        <figure class="card"><img class="card-image" src="{{ asset('build/'~weekend.img) }}" alt="{{ weekend.title }}">
+                            <div class="card-seo">
+                                <div class="content">
+                                    <h4 class="seo-title">{{ weekend.title }} </h4>
+                                    <div class="seo-content">
+                                        <p>{{ weekend.typePrestation}}</p>
+                                    </div>
+                                </div>
+                                <div class="seo-overlay"></div>
+                            </div>
+                            <figcaption class="card-details" style="text-align: center">
+                                <div class="card-details-content">
+                                    <span class="card-details-title md-title"> {{ weekend.title }}  {{ weekend.pays}} </span>
+                                    <div class="card-prices">
+                                        <span class="start-from"></span>
+                                        <span class="current-price"></span>
+                                        <a href="{{ path('produits_show', {'id':  weekend.id}) }}" class="btn btn-primary" style="margin-right: auto;margin-left: auto" role="button">
+                                            Voir l'offre</a>
+                                    </div>
+
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </article>
+                {% endfor %}
+
+            </div>
+        </div>
+{% endif %}
+        <style>
+            .type-voyage .card .card-image {
+                height: 200px;
+            }
+        </style>
+    </section>
+    <!-- /section main -->
+    <!-- section complementary -->
+    <section role="complementary"></section>
+

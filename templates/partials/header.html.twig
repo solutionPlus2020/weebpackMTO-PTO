@@ -1,0 +1,198 @@
+
+<header id="header">
+    <!-- header - top-header : logo- contact info -->
+    <div class="container top-header position-relative">
+        <div class="row position-absolute" style="right:20px;top:20px">
+            <h1 class="col-12" style="font-size: 1.4rem; color:#59ab47;margin-right: 30px;">
+                <span style="margin-left:30px;display: block;color:#333" class="font-weight-bold;col d-none d-lg-block">
+                    Partez où vous voulez pour l'association que vous aimez !
+                </span>
+            </h1>
+        </div>
+        <div class="row no-gutters">
+            <div class="col-4">
+                {% if test== 'mto' %}
+                <img  class="navbar-brand" src="{{ asset('build/MTOlogo.png') }}"  at="MTO-PTO-logo" width="40%">
+                {% endif %}
+                {% if test== 'pto' %}
+                <img  class="navbar-brand" src="{{ asset('build/PTOlogo.png') }}"  at="PTO-logo" width="40%">
+                {% endif %}
+            </div>
+            <div class="col-8  row header-info ">
+                <div class="col d-none d-lg-block">
+                    <a href="#">
+                        <svg class="svg-inline--fa fa-chalkboard-teacher fa-w-20 is-icon" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chalkboard-teacher" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg="">
+                            <path fill="currentColor" d="M208 352c-2.39 0-4.78.35-7.06 1.09C187.98 357.3 174.35 360 160 360c-14.35 0-27.98-2.7-40.95-6.91-2.28-.74-4.66-1.09-7.05-1.09C49.94 352-.33 402.48 0 464.62.14 490.88 21.73 512 48 512h224c26.27 0 47.86-21.12 48-47.38.33-62.14-49.94-112.62-112-112.62zm-48-32c53.02 0 96-42.98 96-96s-42.98-96-96-96-96 42.98-96 96 42.98 96 96 96zM592 0H208c-26.47 0-48 22.25-48 49.59V96c23.42 0 45.1 6.78 64 17.8V64h352v288h-64v-64H384v64h-76.24c19.1 16.69 33.12 38.73 39.69 64H592c26.47 0 48-22.25 48-49.59V49.59C640 22.25 618.47 0 592 0z"></path>
+                        </svg>
+                        <!-- <i class="fas fa-chalkboard-teacher is-icon"></i> -->
+                        <br>Notre
+                        <br> approche
+                    </a>
+                </div>
+                <div class="col d-none d-lg-block">
+                    <a href="#">
+                        <svg class="svg-inline--fa fa-staylinked fa-w-14 is-icon" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="staylinked" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 512" data-fa-i2svg="">
+                            <path fill="currentColor" d="M382.7 292.5l2.7 2.7-170-167.3c-3.5-3.5-9.7-3.7-13.8-.5L144.3 171c-4.2 3.2-4.6 8.7-1.1 12.2l68.1 64.3c3.6 3.5 9.9 3.7 14 .5l.1-.1c4.1-3.2 10.4-3 14 .5l84 81.3c3.6 3.5 3.2 9-.9 12.2l-93.2 74c-4.2 3.3-10.5 3.1-14.2-.4L63.2 268c-3.5-3.5-9.7-3.7-13.9-.5L3.5 302.4c-4.2 3.2-4.7 8.7-1.2 12.2L211 510.7s7.4 6.8 17.3-.8l198-163.9c4-3.2 4.4-8.7.7-12.2zm54.5-83.4L226.7 2.5c-1.5-1.2-8-5.5-16.3 1.1L3.6 165.7c-4.2 3.2-4.8 8.7-1.2 12.2l42.3 41.7 171.7 165.1c3.7 3.5 10.1 3.7 14.3.4l50.2-38.8-.3-.3 7.7-6c4.2-3.2 4.6-8.7.9-12.2l-57.1-54.4c-3.6-3.5-10-3.7-14.2-.5l-.1.1c-4.2 3.2-10.5 3.1-14.2-.4L109 180.8c-3.6-3.5-3.1-8.9 1.1-12.2l92.2-71.5c4.1-3.2 10.3-3 13.9.5l160.4 159c3.7 3.5 10 3.7 14.1.5l45.8-35.8c4.1-3.2 4.4-8.7.7-12.2z"></path>
+                        </svg>
+                        <!-- <i class="fab fa-staylinked is-icon"></i> -->
+                        <br>Partenariat
+                        <br> Associatifs</a>
+                </div>
+                <div class="col d-none d-lg-block">
+                    <a href="#">
+                        <svg class="svg-inline--fa fa-envelope fa-w-16 is-icon" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="envelope" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                            <path fill="currentColor" d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path>
+                        </svg>
+                        <!-- <i class="fas fa-envelope is-icon"></i> -->
+                        <br>Devis par
+                        <br> Email</a>
+                    <!--a href='/services/demande-par-email'><span  class="has-icon-mail">DEVIS</span></a--></div>
+                <div class="col d-none d-lg-block">
+                    <a href="#">
+                        <svg class="svg-inline--fa fa-heart fa-w-16 is-icon" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                            <path fill="currentColor" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path>
+                        </svg>
+                        <!-- <i class="fas fa-heart is-icon"></i> -->
+                        <br>VOS
+                        <br>FAVORIS</a>
+                    <!--a href='/services/demande-par-email'><span  class="has-icon-mail">DEVIS</span></a--></div>
+                <div class="col d-none d-lg-block">
+                    <a href="#">
+                        <svg class="svg-inline--fa fa-user fa-w-14 is-icon" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg="">
+                            <path fill="currentColor" d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"></path>
+                        </svg>
+                        <!-- <i class="fas fa-user is-icon"></i> -->
+                        <br>VOTRE
+                        <br> COMPTE
+                        <!--a href='/services/demande-par-email'><span  class="has-icon-mail">DEVIS</span></a--></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /header-logo-->
+    <!-- header-nav-->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a href="tel:0102030405" alt="Téléphone" class="navbar-brand">
+                <svg class="svg-inline--fa fa-mobile-alt fa-w-10 d-block d-lg-none" style="color: white;" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="mobile-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg="">
+                    <path fill="currentColor" d="M272 0H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h224c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zM160 480c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm112-108c0 6.6-5.4 12-12 12H60c-6.6 0-12-5.4-12-12V60c0-6.6 5.4-12 12-12h200c6.6 0 12 5.4 12 12v312z"></path>
+                </svg>
+                <!-- <i class="fas fa-mobile-alt d-block d-lg-none" style="color: white"></i> --></a>
+            <a href="#" alt="Par email" class="navbar-brand">
+                <svg class="svg-inline--fa fa-envelope fa-w-16 d-block d-lg-none" style="color: white;" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="envelope" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                    <path fill="currentColor" d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path>
+                </svg>
+                <!-- <i class="fas fa-envelope  d-block d-lg-none" style="color: white;"></i> --></a>
+            <a href="#" alt="Voyages favoris" class="navbar-brand">
+                <svg class="svg-inline--fa fa-heart fa-w-16 d-block d-lg-none" style="color: white;" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                    <path fill="currentColor" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path>
+                </svg>
+
+                <!-- <i class="fas fa-heart d-block d-lg-none" style="color: white;"></i> --></a>
+            <a href="#" alt="Déconnexion" class="navbar-brand">
+                <svg class="svg-inline--fa fa-user fa-w-14 d-block d-lg-none" style="color: white;" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg="">
+                    <path fill="currentColor" d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"></path>
+                </svg>
+                <!-- <i class="fas fa-user d-block d-lg-none" style="color: white"></i> --></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"><span style="color: white">☰</span></button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">
+                            <svg class="svg-inline--fa fa-home fa-w-18 d-none d-lg-block" style="color: white;" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="home" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg="">
+                                <path fill="currentColor" d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"></path>
+                            </svg>
+                            <!-- <i class="fas fa-home d-none d-lg-block" style="color: white"></i> --><span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown megamenu">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Destinations
+                        </a>
+                        <div class="dropdown-menu">
+                            <ul class="list-unstyled" role="menu" style="position:relative">
+                                <a  href="{{ path('Portugal_PTO') }}"><li class="item-link box pays"><span class="item-title">Portugal<svg class="svg-inline--fa fa-chevron-right fa-w-10 is-chevron-active" style="display: none;" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg><!-- <i class="fas fa-chevron-right is-chevron-active" style="display:none;"></i> --></span>
+                                </li></a>
+
+                                <a href="{{ path('CapVert_PTO') }}"><li class="item-link box"><span class="item-title">Cap Vert <svg class="svg-inline--fa fa-chevron-right fa-w-10 is-chevron-active" style="display: none;" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg><!-- <i class="fas fa-chevron-right is-chevron-active" style="display:none;"></i> --></span>
+                                </li></a>
+                                <a href="{{ path('Madere_PTO') }}"><li class="item-link box"><span class="item-title">Madère <svg class="svg-inline--fa fa-chevron-right fa-w-10 is-chevron-active" style="display: none;" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg><!-- <i class="fas fa-chevron-right is-chevron-active" style="display:none;"></i> --></span>
+                                    </li></a>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown megamenu">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Prestations
+                        </a>
+                        <div class="dropdown-menu">
+                            <ul class="list-unstyled" role="menu" style="position:relative">
+                                <a  href="{{ path('sejours_PTO') }}"><li class="item-link box pays"><span class="item-title">Séjours<svg class="svg-inline--fa fa-chevron-right fa-w-10 is-chevron-active" style="display: none;" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg><!-- <i class="fas fa-chevron-right is-chevron-active" style="display:none;"></i> --></span>
+                                    </li></a>
+
+                                <a href="{{ path('circuits_PTO') }}"><li class="item-link box"><span class="item-title">Circuits <svg class="svg-inline--fa fa-chevron-right fa-w-10 is-chevron-active" style="display: none;" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg><!-- <i class="fas fa-chevron-right is-chevron-active" style="display:none;"></i> --></span>
+                                    </li></a>
+                                <a href="{{ path('Weekends_PTO') }}"><li class="item-link box"><span class="item-title">Week-end <svg class="svg-inline--fa fa-chevron-right fa-w-10 is-chevron-active" style="display: none;" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg><!-- <i class="fas fa-chevron-right is-chevron-active" style="display:none;"></i> --></span>
+                                    </li></a>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown megamenu">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Destinations <br> Prestations
+
+                        </a>
+                        <div class="dropdown-menu">
+                            <ul class="list-unstyled" role="menu" style="position:relative">
+
+
+                                <a href="{{ path('Portugal_Sejour_PTO') }}"><li class="item-link box pays"><span class="item-title">Portugal Séjours<svg class="svg-inline--fa fa-chevron-right fa-w-10 is-chevron-active" style="display: none;" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg><!-- <i class="fas fa-chevron-right is-chevron-active" style="display:none;"></i> --></span>
+                                    </li></a>
+                                <a  href="{{ path('Portugal_Circuit_PTO') }}"><li class="item-link box pays"><span class="item-title">Portugal circuits<svg class="svg-inline--fa fa-chevron-right fa-w-10 is-chevron-active" style="display: none;" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg><!-- <i class="fas fa-chevron-right is-chevron-active" style="display:none;"></i> --></span>
+                                    </li></a>
+                                <a  href="{{ path('Portugal_WE_PTO') }}"><li class="item-link box pays"><span class="item-title">Portugal weekends<svg class="svg-inline--fa fa-chevron-right fa-w-10 is-chevron-active" style="display: none;" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg><!-- <i class="fas fa-chevron-right is-chevron-active" style="display:none;"></i> --></span>
+                                    </li></a>
+                                <a  href="{{ path('Madere_Sejour_PTO') }}"><li class="item-link box pays"><span class="item-title">Madère Séjours<svg class="svg-inline--fa fa-chevron-right fa-w-10 is-chevron-active" style="display: none;" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg><!-- <i class="fas fa-chevron-right is-chevron-active" style="display:none;"></i> --></span>
+                                    </li></a>
+                                <a  href="{{ path('Madere_Circuit_PTO') }}"><li class="item-link box pays"><span class="item-title">Madère circuits<svg class="svg-inline--fa fa-chevron-right fa-w-10 is-chevron-active" style="display: none;" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg><!-- <i class="fas fa-chevron-right is-chevron-active" style="display:none;"></i> --></span>
+                                    </li></a>
+                                <a  href="{{ path('Madere_WE_PTO') }}"><li class="item-link box pays"><span class="item-title">Madère weekends<svg class="svg-inline--fa fa-chevron-right fa-w-10 is-chevron-active" style="display: none;" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg><!-- <i class="fas fa-chevron-right is-chevron-active" style="display:none;"></i> --></span>
+                                    </li></a>
+                                <a  href="{{ path('CapVert_Sejour_PTO') }}"><li class="item-link box pays"><span class="item-title">Cap Vert Séjours<svg class="svg-inline--fa fa-chevron-right fa-w-10 is-chevron-active" style="display: none;" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg><!-- <i class="fas fa-chevron-right is-chevron-active" style="display:none;"></i> --></span>
+                                    </li></a>
+                                <a  href="{{ path('CapVert_Circuit_PTO') }}"><li class="item-link box pays"><span class="item-title">Cap Vert circuits<svg class="svg-inline--fa fa-chevron-right fa-w-10 is-chevron-active" style="display: none;" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg><!-- <i class="fas fa-chevron-right is-chevron-active" style="display:none;"></i> --></span>
+                                    </li></a>
+                                <a  href="{{ path('CapVert_WE_PTO') }}"><li class="item-link box pays"><span class="item-title">Cap Vert weekends<svg class="svg-inline--fa fa-chevron-right fa-w-10 is-chevron-active" style="display: none;" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg><!-- <i class="fas fa-chevron-right is-chevron-active" style="display:none;"></i> --></span>
+                                    </li></a>
+
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link">Bienvenue <br>{{ app.user }}</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{path('contacts_new')}}">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link zoom" href="{{ path('app_logout') }}">  <i class="fas fa-sign-out-alt"></i></a></li>
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="sub-header">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item"><img class="d-block w-100" src="{{ asset('build/megeve2.jpg') }}" alt="First slide" style="object-fit: cover;height:50%"></div>
+            <div class="carousel-item"><img class="d-block w-100 " src="{{ asset('build/bg3.jpg') }}" alt="Second slide" style="object-fit: cover;height:50%"></div>
+            <div class="carousel-item"><img class="d-block w-100" src="{{ asset('build/dg2.jpg') }}" alt="Third slide" style="object-fit: cover;height:50%"></div>
+            <div class="carousel-item"><img class="d-block w-100 " src="{{ asset('build/dg1.jpg') }}" alt="First slide" style="object-fit: cover;height:50%"></div>
+            <div class="carousel-item"><img class="d-block w-100" src="{{ asset('build/al4.jpg') }}" alt="Third slide" style="object-fit: cover"></div>
+            <div class="carousel-item active"><img class="d-block w-100" src="{{ asset('build/CASTELLASTVA.jpg') }}" alt="Third slide"></div>
+        </div><a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a>
+    </div>
+</div>
+<style>
+.item-title:hover .opt{
+    display: block;
+            }
+</style>
+

@@ -1,0 +1,137 @@
+body {
+    color:black;
+    background-color:white;
+}
+
+
+.sites-list{
+
+    background: #fff;
+    /*box-shadow: 0 5px 10px -5px #333232;*/
+    overflow: hidden;
+    width:0%;
+    /*border:1px solid #ccc;*/
+    margin-top: 20%;
+    margin-left: auto;
+    margin-right: auto;
+
+    /*animation-name: animation-width;*/
+
+    animation-name: animation-width;
+
+    animation-duration: 5s;
+    /* animation-delay: 2s;*/
+    animation-iteration-count: 1;
+    /*animation-play-state: paused;*/
+    animation-fill-mode:forwards; /*laisser l'élément dans sont état final*/
+
+
+    /* background: rgba(247, 247, 247, 0.5);*/
+    background: rgba(0, 0, 0, 0.3);
+    color:#3a64ae;
+    padding: 28px 28px 28px 28px;
+    padding-left:40px;
+    padding-right:40px;
+
+
+}
+.sites-list .site{
+    background: #fff;
+    padding: 20px 27px 27px 27px;
+    box-shadow: 0 5px 10px -5px #333232;
+    text-align: center;
+    padding-bottom: 10%;
+
+
+    overflow:hidden;
+    box-sizing:border-box;
+
+    opacity:1;
+    width:auto;
+
+    animation:  animation-display 1s linear;
+
+
+
+
+
+}
+.site img{
+    width: 70%;
+    margin:40px 40px ;
+}
+.site img:hover{
+    border-bottom:1px solid #ccc;
+
+}
+
+/* The animation code */
+@keyframes animation-width2 {
+    0%   {width:0%; }
+    /* 25%  {width:25%;}
+     50%  {width:50%;}*/
+    75%  {width:75%;}
+}
+
+
+@keyframes animation-width {
+    from {
+
+        width: 0%;
+    }
+
+    to {
+        width: 80%;
+
+    }
+}
+
+@keyframes animation-display {
+    from {
+        height:0;
+        width:0;
+        opacity:0;
+    }
+    70% {
+        height:0;
+        width:0;
+        opacity:0;
+    }
+    to {
+        opacity:1;
+        width:auto;
+        height:auto;
+    }
+}
+#content_skills{
+    overflow:hidden;
+    box-sizing:border-box;
+    position:relative;
+    opacity:1;
+    width:auto;
+    height:auto;
+    animation: transition2 7s linear;
+}
+
+
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    font-size: 20px;
+    left: 0px;
+    top: 0px;
+   /* position: absolute;*/
+
+    -webkit-transition-property: width height background-color font-size left top color;
+    -webkit-transition-duration: 2s;
+    -webkit-transition-timing-function: ease;
+
+    transition-property: width height background-color font-size left top color;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+}
+@media screen and (max-width: 480px) {
+
+}

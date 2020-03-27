@@ -1,0 +1,150 @@
+.main-raised {
+    padding: 5%;
+    background: #FFFFFF;
+    position: relative;
+    z-index: 3;
+    margin: -60px 30px 0px;
+    border-radius: 6px;
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);}
+.icon.icon-primary {
+    color: #3a64ae ;
+    margin-right: 1%;
+    font-size: 30px;
+}
+.posi{
+    position:relative;
+    left:10%;
+}
+.posii{
+    position:relative;
+    left:3%;
+}
+.titlee{
+    padding-bottom: 7%;
+    text-align: left;
+}
+.but{
+    width:100% !important;
+    margin-bottom: 10%;
+}
+.small{
+    color:#999;
+    font-size: smaller;
+}
+.di{
+    padding-left: 0px;
+}
+
+.foo{
+    transition: all 10s ease-out;
+    border:none;
+
+}
+.foo:focus{
+    border:none;
+    background: no-repeat center bottom, center calc(100% - 1px);
+    background: linear-gradient(to top, #3a64ae 2px, rgba(156, 39, 176, 0) 2px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px);
+
+}
+
+.iframe{
+    z-index: -1000;
+    width:100%;
+}
+.descriptions{
+    display:flex;
+}
+
+.foo:hover{
+    border:none !important;
+}
+.badge.badge-danger{
+    background-color:#76923c ;
+    padding-bottom: 1%;
+}
+.invalid-feedback{
+    color:#9c27b0 ;
+}
+.form-group bmd-form-group is-filled{
+    font-family: Roboto;
+    font-weight: 300;
+    line-height: 1.5em;
+}
+<!-------------header--------------------------------------------------------------------------->
+.page-header{
+    height: 1vh;
+    }
+
+
+.page-header.header-small{
+    min-height: 0vh;
+    height: 1vh;
+
+}
+.erreur{
+    background-image: url("{{ asset('build/MTO.jpg') }}");
+
+}
+<!-----------------------------ck-editor--------------------------------------------------------->
+
+#cke_descriptions_contenu{
+    border: none;
+
+}
+<!-----------------------------Body--------------------------------------------------------->
+   body{
+padding-top: 5% !important;
+}
+* {
+    outline: none;
+}
+.sites-list{
+    /*animation-name: animation-width;*/
+
+    animation-name: animation-width;
+
+    animation-duration: 5s;
+    /* animation-delay: 2s;*/
+    animation-iteration-count: 1;
+    /*animation-play-state: paused;*/
+    animation-fill-mode:forwards; /*laisser l'élément dans sont état final*/
+
+}
+/* The animation code */
+@keyframes animation-width2 {
+    0%   {width:0%; }
+    /* 25%  {width:25%;}
+     50%  {width:50%;}*/
+    75%  {width:75%;}
+}
+
+
+@keyframes animation-width {
+    from {
+
+        width: 0%;
+    }
+
+    to {
+        width: 80%;
+
+    }
+}
+
+@keyframes animation-display {
+    from {
+        height:0;
+        width:0;
+        opacity:0;
+    }
+    70% {
+        height:0;
+        width:0;
+        opacity:0;
+    }
+    to {
+        opacity:1;
+        width:auto;
+        height:auto;
+    }
+}

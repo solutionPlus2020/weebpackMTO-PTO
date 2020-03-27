@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Log in!{% endblock %}
+
+{% block body %}
+
+    <div class="page-header"
+         style="background-image: url('{{ asset('build/login-1.jpg') }}'); background-size: cover; background-position: 80% 50%;">
+        <div class="container pt-5">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-8 p-4" style="background-color: rgba(0,0,0,0.1)">
+                    <form class="form" method="post">
+                        <div class="card card-login card-hidden mb-0">
+                            <div class="card-body ">
+                                <div class="mt-5 d-flex mt-1 pl-2">
+                                    <img src="{{ asset('build/MTOlogo.png') }}" at="MTO-PTO-logo" width="50%">
+                                    <img src="{{ asset('build/PTOlogo.png') }}" at="PTO-logo" width="50%">
+                                </div>
+                                <div class="text-center mt-4 pl-2  ">
+                                    <h4 class="card-title text-secondary " style="-webkit-transform-origin: center center !important;
+    -webkit-transform: scale(1.2) !important;">Bienvenue sur votre espace B2B</h4>
+                                    <hr>
+                                </div>
+                                <div class="input-group col-lg-11 mx-auto mb-3 mt-4">
+                                    <input type="text" value="{{ last_username }}" name="username" id="inputUsername"
+                                           class="form-control" placeholder='Identifiant' required autofocus>
+                                </div>
+
+                                <div class="input-group col-lg-11 mx-auto mb-2">
+                                    <input type="password" name="password" id="inputPassword" class="form-control"
+                                           placeholder="Mot de passe" required>
+                                </div>
+                                </span>
+                                <input type="hidden" name="_csrf_token"
+                                       value="{{ csrf_token('authenticate') }}">
+                            </div>
+                            <div class="card-footer justify-content-center mb-0">
+                                <button class="btn btn-lg col-md-12" type="submit">
+                                    Connexion
+                                </button>
+                            </div>
+                            <div class="card-footer d-flex justify-content-between ">
+                                <div><a class="badge badge-light text-secondary" href="{{ path('app_signup') }}">Créer un
+                                        compte</a></div>
+                                <div><a class="badge badge-light text-secondary" href="{{ path('forgot_pwd') }}">Mot de
+                                        passe oublié</a></div>
+                            </div>
+
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    </div>
+
+{% endblock %}

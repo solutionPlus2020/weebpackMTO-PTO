@@ -1,0 +1,164 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Produits Description{% endblock %}
+
+{% block body %}
+    {% include 'partials/header.html.twig' %}
+
+    <section id="main" role="main">
+        <div class="container" id='page-product'>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="./">
+                            {{ produit.fournisseur }}
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="#">
+                            {{ produit.pays }} </a></li>
+                    {% for description in descriptions %}
+                        <li class="breadcrumb-item active" aria-current="page">{{ description.titre }}</li>
+                    {% endfor %}
+                </ol>
+            </nav>
+            {% for description in descriptions %}
+                <h1 class='color-blue'>{{ description.titre }}</h1>
+            {% endfor %}
+            <section class="row card-details">
+                <div class="col-lg-8 card-details-carousel">
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner" role="listbox">
+                            <div class="carousel-item  carousel-item-produit active">
+                                {% for img in images|slice(0, 1) %}
+
+                                    <img class="d-block img-fluid carousel-img-produit " src="{{ asset('build/'~ img.path ) }}"
+                                         alt="{{ img.path }}"/>
+                                {% endfor %}
+                            </div>
+                            {% for img in images %}
+
+                                <div class="carousel-item  carousel-item-produit ">
+                                    <img class="d-block img-fluid carousel-img-produit " src="{{ asset('build/'~ img.path ) }}"
+                                         alt="{{ img.path }}"/>
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
+                           data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span></a>
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button"
+                           data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card-details-info">
+                        <div class="section-info section-top ">
+                            <span class="percent color-coral"></span>
+                            <span class="price float-right color-coral">
+                            <span class="d-block start text-s color-grey"
+                                  style="margin-bottom:8px">{{ produit.typePrestation }}</span>
+
+          <span class="d-inline ttc text-md">{{ produit.title }}</span>
+                            <span class="d-block old-price text-s color-grey">
+
+                                </strike>
+                            </span>
+                        </span>
+                        </div>
+                        <div class='section-info section-middle color-blue'>
+                            <span class="d-block"> {{ produit.typePrestation }}</span>
+                            <strong>
+
+                                {{ produit.pays }}
+
+                            </strong>
+                            <strong class="d-block">{{ produit.title }}</strong>
+                            <span class='depCities d-block'></span>
+                            <span class="mealPlan d-block"><i class="far fa-calendar-alt" style="font-size:24px"></i>
+           Dates de départ entre 01/01/1900 et 01/01/1900
+        </span><span class="duration d-block"><i class="far fa-clock" style="font-size:24px"></i>
+            7 jours/6 nuits
+       </span>
+                        </div>
+                        <div class='section-info section-bottom'><span
+                                    class="d-block text-sm"><b>Info et réservation</b></span>
+                            <span class="d-block text-md"><b><a class="tel-resa"
+                                                                href="">(+33) 111 111 111</a></b></span>
+                            <span class="d-block text-s">(Prix d'un appel local)</span>
+                            <span class="d-block text-sm ref-prod"><b>Réf : PTO-118</b></span>
+                            <a href="#tarification" class="btn btn-primary center btn-md" role="button" style="">Voir
+                                nos
+                                tarifs</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--  description -->
+
+            <div class="row description">
+                <ul class="nav nav-tabs" id="" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active color-blue" id="description-tab" data-toggle="tab" href="#description"
+                           role="tab" aria-controls="description" aria-selected="true">Descriptif
+                        </a>
+                    </li>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link color-blue" id="conditions-tab" data-toggle="tab" href="#conditions"
+                           role="tab" aria-controls="conditions" aria-selected="false">Conditions tarifaires
+                        </a>
+                    </li>
+                    {# <li class="nav-item">
+                         <a class="nav-link color-blue" id="conditions-tab" data-toggle="tab" href="#conditions" role="tab" aria-controls="conditions" aria-selected="false">MENTIONS LEGALES
+                         </a>
+                     </li>#}
+                    <li class="nav-item">
+                        <a class="nav-link color-blue" id="conditions-tab" data-toggle="tab" href="#conditions"
+                           role="tab" aria-controls="conditions" aria-selected="false">Infos Voyageurs
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link color-blue" id="conditions-tab" data-toggle="tab" href="#conditions"
+                           role="tab" aria-controls="conditions" aria-selected="false">Vidéo
+                        </a>
+                    </li>
+                </ul>
+
+                </div>
+                <div class="tab-content pb-2" id="tab-content">
+
+                        <div class="tab-pane fade show active" id="description">
+                            {% for description in descriptions %}
+                            {{ description.contenu |raw }}
+                            {% endfor %}
+                        </div>
+
+                    <div class="tab-pane fade pb-5" id="conditions">
+                        <h2>Ce prix comprend</h2>
+                        Les taxes aéroport (incluant la hausse carburant obligatoire)<br>Les vols speciaux A/R<br>L'accueil
+                        et l'assistance<br>Les transferts aéroport/hôtel A/R<br>Le logement par personne en base chambre
+                        double<br>La formule tout compris<br>La Cure Incluse
+                        <h2>Ce prix ne comprend pas</h2>
+                        - Les assurances <br> - Les autres repas et les boissons<br> - Les activités payantes<br> - Les
+                        cures en option<br> - Les dépenses d'ordre personnel<br>- Taxe de séjour , d'une valeur de 3
+                        Dinars Tunisiens par Adulte et par nuit à régler sur place à partir de 25 Octobre 2018
+                    </div>
+                    <div class="tab-pane fade pb-5" id="conditions">
+
+                    </div>
+                </div>
+            </div>
+            <!-- / description -->
+        </div>
+        <section id="product-tabs" class="container">
+
+        </section>
+        </div>
+    </section>
+    {% include 'partials/footer.html.twig' %}
+{% endblock %}

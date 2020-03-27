@@ -1,0 +1,29 @@
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Produits index{% endblock %}
+
+{% block body %}
+
+
+    {%  include 'partials/header.html.twig' %}
+    {% if produits is empty %}
+        <h1 class="text-center text-secondary m-5"> Désolé,Pas de produits pour l'instant</h1>
+        <a href="{{ path('fournisseur_index') }}">
+            <div class="container type-voyage">
+                <h2 class="h2">
+
+                    <i class="fas fa-undo-alt"></i> Fournisseur
+
+                </h2>
+            </div>
+        </a>
+
+
+    {% else %}
+        {%  include 'partials/produits.html.twig' %}
+
+    {% endif %}
+    {%  include 'partials/footer.html.twig' %}
+
+{% endblock %}
