@@ -1,68 +1,40 @@
 
-
 {% extends 'base.html.twig' %}
-
 {% block title %} Fournisseur{% endblock %}
- {% block stylesheets %}
-
- {% endblock %}
 {% block body %}
 
 <div class="container-fuild mt-0" style="background-image: url('{{ asset('build/bg3.jpg') }}')">
     <section  class="sites-list text-center">
         <div class="row site">
             <div class="col-12 h4">
-
-                    <div class="text-center mt-4 pl-2 pb-3 pl-5 d-flex justify-content-between" >
-                        <h3 class="card-title text-secondary">Bienvenue<span class="pr-1" style="color:darkkhaki"> {{ app.user }} </span>sur votre espace B2B </h3>
-                        <a href="{{ path('app_logout') }}"><div class="text-secondary">
+                    <div class="text-center mt-4 pl-2 pb-3 pl-5 d-flex justify-content-around" >
+                        <h3 class="card-title text-secondary">
+                            Bienvenue<span class="pr-1 fourUser" > {{ app.user }} </span>sur votre espace B2B
+                        </h3>
+                        <a href="{{ path('app_logout') }}">
+                            <div class="text-secondary">
                                 <i class="fas fa-sign-out-alt"></i>
-                            </div><span style="color:darkkhaki">{{ app.user }}</span>
+                            </div>
+                            <span class="fourUser zoom" >{{ app.user }}</span>
                         </a>
                     </div>
-                <div  class="px-3"> <hr></div>
-
+                <div  class="px-3"><hr></div>
             </div>
-
-            <div class="col-6 ">
+            <div class="col-6 zoom">
                 <a href="{{ path('produits_MTO') }}">
-                    <img  src="{{ asset('build/MTOlogo.png') }}"  at="MTO-logo" width="100%">
+                    <img  src="{{ asset('build/MTOlogo.png') }}"  alt="MTO-logo" width="100%">
                 </a>
             </div>
-            <div class="col-6">
+            <div class="col-6 zoom">
                 <a href="{{ path('produits_PTO') }}">
-                    <img src="{{ asset('build/PTOlogo.png') }}"  at="PTO-logo" width="100%"></a>
+                    <img src="{{ asset('build/PTOlogo.png') }}"  alt="PTO-logo" width="100%">
+                </a>
             </div>
-            </div>
-
+        </div>
     </section>
-
 </div>
-{#<div class="row">
-    <section class="col-md-11 col-md-11 col-sm-11" style="background-color:rgba(0,0,0,0.4)">
-        <div class="col-lg-12 col-md-12 col-sm-12">
 
-            <div class="card card-login card-hidden">
-                <div class="text-center mt-4 pl-2 pb-3 pl-5 d-flex justify-content-between" >
-                    <h3 class="card-title text-secondary">Bienvenue<span style="color:darkkhaki"> {{ app.user }} </span>sur votre espace B2B </h3>
-                    <a href="{{ path('app_logout') }}"><div class="text-secondary"><i class="material-icons red pt-3 pr-5">logout</i></div></a>
-                </div>
-                <div  class="px-5"> <hr></div>
-                <div class="card-body pb-5">
-                    <div class="mt-5 d-flex mt-1 pl-2 justify-content-around p-5"  >
-
-                        <a href="{{ path('produits_MTO') }}">
-                            <img  src="../assets/img/MTOlogo.png"  at="MTO-logo" width="100%">
-                        </a>
-
-
-                        <a href="{{ path('produits_PTO') }}"><img src="../assets/img/PTOlogo.png"  at="PTO-logo" width="100%"></a>
-                    </div>
-
-
-                </div>
-            </div>#}
-<div style="background-color: #1b1e21">
+<div class="fourniBg" >
     <section class="grid sites-list " >
         <div class="image-1" >
             <h1>Bienvenue {{ app.user }} sur votre espace B2B</h1>

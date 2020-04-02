@@ -15,10 +15,10 @@ use Symfony\Component\Routing\Annotation\Route;
  */
 class TypePrestationController extends AbstractController
 {
-    /**
+   /* /**
      * @Route("/", name="type_prestation_index", methods={"GET"})
      */
-    public function index(TypePrestationRepository $typePrestationRepository): Response
+    public function indexPrestation(TypePrestationRepository $typePrestationRepository): Response
     {
         return $this->render('type_prestation/index.html.twig', [
             'type_prestations' => $typePrestationRepository->findAll(),

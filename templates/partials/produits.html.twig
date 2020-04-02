@@ -1,7 +1,8 @@
 
     <!-- section main -->
     <section id="main" role="main" class="mx-auto">
-        {%  if  sejours %}
+        {% if not sejours %}
+        {%  else %}
         <div class="container  " id="incontournables">
             <h2 class="h2">
                 <svg class="svg-inline--fa fa-grip-lines fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="grip-lines" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
@@ -13,20 +14,26 @@
 
                 {% for sejour in sejours %}
                     <div class="col-md-3 col-sm-6 item-thematique">
+                        {% if not sejour.img %}
+                            <img  src='https://via.placeholder.com/270.png/09f/fff'>
 
-                        <img  src="{{ asset('build/'~ sejour.img) }}"
+                        {% else %}
+                        <img  src="{{ asset('build/'~sejour.img) }}"
                              alt=" &amp; IGUAZU - CIRCUIT 12 JOURS &amp; 9 NUITS  - ARGENTINE"
                              style="height:270px;object-fit: cover;">
+                            {% endif %}
                         <!--span style="position:absolute; top:0px; left:15px; padding:8px; background:#ff4655; color:white;font-size:24px;">-%</span-->
                         <div class="thematique-content text-center">
                             <h3 class="pb-0" style="font-size: 0.9rem;text-transform: none">{{ sejour.title }} </h3> <h6 > {{ sejour.typePrestation}} - {{ sejour.pays}}</h6>
                             <span></span><span class="from"></span><span class="price"></span>
                             <span class="ttc"></span><a href="{{ path('produits_show', {'id': sejour.id}) }}" class="btn btn-primary center">Voir l'offre</a></div>
                     </div>
+
                 {% endfor %}
             </div>
         </div>
 {% endif %}
+
         {%  if  circuits %}
         <div class="container type-voyage">
             <h2 class="h2">
@@ -37,7 +44,12 @@
                 <!-- loop through thematiques -->
                 {% for circuit in circuits %}
                     <article class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb30">
-                        <figure class="card"><img src="{{ asset('build/'~circuit.img) }}"  class="card-image" alt="{{ circuit.title }}" style="object-fit: cover">
+                        <figure class="card">
+                           {% if not circuit.img %}
+                            <img  src='https://via.placeholder.com/350*270.png/09f/fff'>
+                           {% else %}
+                            <img src="{{ asset('build/'~circuit.img) }}"  class="card-image" alt="{{ circuit.title }}" style="object-fit: cover">
+                           {% endif %}
                             <div class="card-seo">
                                 <div class="content">
                                     <h4 class="seo-title">{{ circuit.title }}</h4> <h5 class="seo-title">{{ circuit.typePrestation}} - {{ circuit.pays}} </h5>
@@ -66,6 +78,7 @@
                 {% endfor %}
             </div>
         </div>
+        {% else %}
         {% endif %}
         {%  if  weekends %}
         <div class="container type-voyage">
@@ -102,9 +115,9 @@
                         </figure>
                     </article>
                 {% endfor %}
-
             </div>
         </div>
+        {% else %}
 {% endif %}
         <style>
             .type-voyage .card .card-image {
@@ -114,5 +127,7 @@
     </section>
     <!-- /section main -->
     <!-- section complementary -->
-    <section role="complementary"></section>
+    <section role="complementary">
+
+    </section>
 

@@ -5,6 +5,9 @@ body {
    /* background-color: #111;*/
     color: #ccc;
 }
+.fourniBg{
+    background-color: #395493 !important;
+}
 
 a {
     color: #ccc;

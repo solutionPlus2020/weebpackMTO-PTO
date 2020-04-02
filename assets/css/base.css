@@ -1,7 +1,7 @@
 
 
 @import "~bootstrap";
-@import "owl_002.css";
+
 
 @import url('./footer.css');
 @import url('./fournisseur.css');
@@ -4134,6 +4134,10 @@ footer .sub-footer {
 
 /* Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) and (max-width: 991.98px) {
+    #showDes{
+        display: flex;
+        flex-direction: column;
+    }
 
 }
 

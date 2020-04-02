@@ -2,6 +2,17 @@ body {
     color:black;
     background-color:white;
 }
+.fourUser{
+    color:darkkhaki
+}
+.zoom
+{
+    transition: all 3s ease 0.5s;
+}
+.zoom:hover{
+    transform-origin: center center;
+    transform: scale(1.5);
+}
 
 
 .sites-list{

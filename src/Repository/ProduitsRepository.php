@@ -24,15 +24,9 @@ class ProduitsRepository extends ServiceEntityRepository
      */
 
 
+
     public function findByFourPres($four,$prestation):array
     {
-      /* $connexion=$this->getEntityManager()->getConnection();
-       $query=
-           'SELECT * FROM produits WHERE fournisseur_id=:four';
-        $smst=$connexion->prepare($query);
-        $smst->execute(['four'=>$four]);
-
-        return $smst->fetchAll();*/
         return $this->createQueryBuilder('produit')
             ->innerJoin('produit.fournisseur','fournisseur')
             ->innerJoin('produit.typePrestation','prestation')
@@ -44,13 +38,7 @@ class ProduitsRepository extends ServiceEntityRepository
             ])
             ->getQuery()
             ->getResult();
-
     }
-
-
-
-
-
     public function findByPFP($prestation,$four,$pays):array
     {
        return $this->createQueryBuilder('produit')
